@@ -1,0 +1,124 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="~/content/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+
+        /* Custom container */
+        .container-narrow {
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+            .container-narrow > hr {
+                margin: 30px 0;
+            }
+
+        /* Main marketing message and sign up button */
+        .jumbotron {
+            margin: 60px 0;
+            text-align: center;
+        }
+
+            .jumbotron h1 {
+                font-size: 72px;
+                line-height: 1;
+            }
+
+            .jumbotron .btn {
+                font-size: 21px;
+                padding: 14px 24px;
+            }
+
+        /* Supporting marketing content */
+        .marketing {
+            margin: 60px 0;
+        }
+
+            .marketing p + h4 {
+                margin-top: 28px;
+            }
+    </style>
+    <link href="~/content/bootstrap-responsive.css" rel="stylesheet">
+    <link href="~/content/custom.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="container-narrow">
+
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li class="@Html.IsActiveCss("index", "home")"><a href="@Url.Action("index", "home", new { area = "" })">Home</a></li>
+            </ul>
+            <h3 class="muted">
+               <a href="#">WhatRoute?</a>
+            </h3>
+        </div>
+
+        <hr>
+
+        <div class="jumbotron">
+            <h1>Super awesome WhatRoute Extension methods!</h1>
+            <p class="lead">A set of ASP.Net MVC extension methods to help you figure out whether you are on a particular route or not.</p>            
+            <a class="btn btn-large btn-success" href="#">Github Repository</a>
+        </div>
+
+        <hr>
+
+        <div class="row-fluid marketing">
+            <p> This library takes all the values your provide and incrementally checks to see if they
+                exist in route data and the querystring. If all values you provide are a match, then we have a match.
+                This library will match the values you provide, so you might see strange behavior if you 
+                are using catch all routes like the default one that comes with ASP.Net MVC sample projects. I suggest
+                you use <a href="http://restfulrouting.com">Restful Routing.</a>
+
+                Good uses of this library might be but are not limited to: </p>
+            <ul>
+                <li>Css classes on active menu items</li>
+                <li>Displaying widgets in particular flows</li>
+            </ul>
+            
+            <hr>
+
+            @Html.Partial("Menu")
+            <pre>@Html.Encode(Html.Partial("Menu"))</pre>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>&copy; WhatRoute? 2012</p>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.js"></script>
+    <script src="~/scripts/bootstrap.js"></script>
+</body>
+</html>

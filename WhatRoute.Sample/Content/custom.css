@@ -1,0 +1,17 @@
+﻿ul.example {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.example li {
+    margin: 10px;
+    border: 1px solid #eee;
+    padding: 8px;
+    color: #333;
+}
+
+ul.example li.active {
+    background-color: greenyellow;
+    font-weight: bold;
+}

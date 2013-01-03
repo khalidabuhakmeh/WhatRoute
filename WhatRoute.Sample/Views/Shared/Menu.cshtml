@@ -1,0 +1,22 @@
+﻿<ul class="example">
+    <li class="@Html.IsActiveCss("index", "home")">
+        <a href="@Url.Action("index", "home", new { area = "" })">Default Page Home#Index</a>
+    </li>
+    <li class="@Html.IsActiveCss(new { action = "show", controller = "home", id = 1 })">
+        <a href="@Url.Action("show", "home", new { id = 1, area = "" })">Show Page with id Show#Index id of 1</a>
+    </li>
+    <li class="@Html.IsActiveCss(new { action = "show", controller = "home", id = 2 })">
+        <a href="@Url.Action("show", "home", new { id = 2, area = "" })">Show Page with id Show#Index id of 2</a>
+    </li>
+    <li class="@Html.IsActiveCss(new { action = "another", controller = "home" }, new { q = "guess" })">
+        <a href="@Url.Action("another", "home", new { q = "guess", area = "" })">Show Page with querystring of "guess"</a>
+    </li>
+    <li class="@Html.IsActiveCss(new { action = "index", controller = "testarea", area = "other" })">
+        <a href="@Url.Action("index", "testarea", new { area = "other" })">Index in an area TestArea#Index</a>
+    </li>
+    <li class="@Html.IsActiveCss(new { action = "gross", controller = "home", a = 1, really = 2, gross = 3, path = 4 })">
+        <a href="@Url.Action("gross", "home", new { area = "", a = 1, really = 2, gross = 3, path = 4 })">A really gross path</a>
+@if (Url.IsActive(new {action = "gross", controller = "home", a = 1, really = 2, gross = 3, path = 4})) { @Html.Partial("Sample"); }
+    
+    </li>
+</ul>

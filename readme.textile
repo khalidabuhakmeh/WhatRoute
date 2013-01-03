@@ -61,7 +61,7 @@ h2. Note on Patches/Pull Requests
 
 h2. Contributors
 
-Written by "Khalid Abuhakme":http://github.com/khalidabuhakmeh
+Written by "Khalid Abuhakmeh":http://github.com/khalidabuhakmeh
 
 h2. Latest Release
 

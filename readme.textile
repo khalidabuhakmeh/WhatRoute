@@ -4,7 +4,7 @@ A simple set of extension methods to help you figure out whether you are on a pa
 
 Available via "NuGet":http://nuget.org/List/Packages/WhatRoute
 
-<pre><code> PM> Install-Package WhatRoute.Core </code></pre>
+<pre><code> PM> Install-Package WhatRoute </code></pre>
 
 h2. Getting Started
 

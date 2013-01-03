@@ -1,0 +1,69 @@
+h1. WhatRoute for ASP.Net MVC
+
+A simple set of extension methods to help you figure out whether you are on a particular route or not.
+
+Available via "NuGet":http://nuget.org/List/Packages/WhatRoute
+
+<pre><code> PM> Install-Package WhatRoute.Core </code></pre>
+
+h2. Getting Started
+
+1. Install the package using NuGet.
+2. Add the WhatRoute.Core namespace to your views web.config
+3. Start accessing the extension methods
+
+h2. What's available?
+
+You have the following methods availble:
+
+Url.IsActive(string action, string controller, string area = "")
+Url.IsActive(object routeValues = null, object querystringValues = null)
+
+Html.IsActiveCss(object routeValues = null, object querystringValues = null, string cssClass = "active")
+Html.IsActiveCss(string action, string controller, string area = "", cssClass = "active")
+
+h2. Example Code (from sample)
+
+<pre>
+	<code>
+	<ul class="example">
+	    <li class="@Html.IsActiveCss("index", "home")">
+	        <a href="@Url.Action("index", "home", new { area = "" })">Default Page Home#Index</a>
+	    </li>
+	    <li class="@Html.IsActiveCss(new { action = "show", controller = "home", id = 1 })">
+	        <a href="@Url.Action("show", "home", new { id = 1, area = "" })">Show Page with id Show#Index id of 1</a>
+	    </li>
+	    <li class="@Html.IsActiveCss(new { action = "show", controller = "home", id = 2 })">
+	        <a href="@Url.Action("show", "home", new { id = 2, area = "" })">Show Page with id Show#Index id of 2</a>
+	    </li>
+	    <li class="@Html.IsActiveCss(new { action = "another", controller = "home" }, new { q = "guess" })">
+	        <a href="@Url.Action("another", "home", new { q = "guess", area = "" })">Show Page with querystring of "guess"</a>
+	    </li>
+	    <li class="@Html.IsActiveCss(new { action = "index", controller = "testarea", area = "other" })">
+	        <a href="@Url.Action("index", "testarea", new { area = "other" })">Index in an area TestArea#Index</a>
+	    </li>
+	    <li class="@Html.IsActiveCss(new { action = "gross", controller = "home", a = 1, really = 2, gross = 3, path = 4 })">
+	        <a href="@Url.Action("gross", "home", new { area = "", a = 1, really = 2, gross = 3, path = 4 })">A really gross path</a>
+	@if (Url.IsActive(new {action = "gross", controller = "home", a = 1, really = 2, gross = 3, path = 4})) { @Html.Partial("Sample"); }
+	    
+	    </li>
+	</ul>
+	<code>
+</pre>
+
+h2. Note on Patches/Pull Requests
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Send me a pull request. Bonus points for topic branches.
+
+h2. Contributors
+
+Written by "Khalid Abuhakme":http://github.com/khalidabuhakmeh
+
+h2. Latest Release
+
+1.0.0
+* initial release

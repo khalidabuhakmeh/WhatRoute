@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>WhatRoute</id>
+        <version>1.0.0</version>
+        <title>WhatRoute</title>
+        <authors>Khalid</authors>
+        <owners>khalidabuhakmeh</owners>
+        <projectUrl>http://github.com/khalidabuhakmeh/whatroute</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A simple set of extension methods to help you figure out whether you are on a particular route or not.</description>
+        <summary>A simple set of extension methods to help you figure out whether you are on a particular route or not.</summary>
+        <releaseNotes>Initial release</releaseNotes>
+        <copyright>2013 Khalid Abuhakmeh</copyright>
+        <dependencies>
+            <dependency id="Microsoft.AspNet.Mvc" version="4.0.20710.0" />
+        </dependencies>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System.Web" targetFramework="" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="WhatRoute.Core\bin\Release\WhatRoute.Core.dll" target="lib\net\WhatRoute.Core.dll" />
+    </files>
+</package>

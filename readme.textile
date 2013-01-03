@@ -2,7 +2,7 @@ h1. WhatRoute for ASP.Net MVC
 
 A simple set of extension methods to help you figure out whether you are on a particular route or not.
 
-Available via "NuGet":http://nuget.org/List/Packages/WhatRoute
+Available via "NuGet":http://nuget.org/packages/WhatRoute
 
 <pre><code> PM> Install-Package WhatRoute </code></pre>
 

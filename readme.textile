@@ -71,7 +71,5 @@ Written by "Khalid Abuhakmeh":http://github.com/khalidabuhakmeh
 
 h2. Latest Release
 
-1.1.0
-* added PathTo and IsActiveRoute / IsActiveRouteCss
-1.0.0
-* initial release
+* 1.1.0 : added PathTo and IsActiveRoute / IsActiveRouteCss
+* 1.0.0 : initial release

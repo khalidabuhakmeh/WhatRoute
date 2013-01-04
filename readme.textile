@@ -29,7 +29,7 @@ Html.IsActiveRouteCss(string routeName, object routeValues = null, object querys
 h2. Example Code (from sample)
 
 <pre>
-	<code>
+<code>
 <ul class="example">
     <li class="@Html.IsActiveRouteCss("root")">
         <a href="@Url.PathTo("root")">Root</a>
@@ -54,7 +54,7 @@ h2. Example Code (from sample)
         @if (Url.IsActive(new {action = "gross", controller = "home", a = 1, really = 2, gross = 3, path = 4})) { @Html.Partial("Sample"); }
     </li>
 </ul>
-	<code>
+</code>
 </pre>
 
 h2. Note on Patches/Pull Requests

@@ -1,4 +1,7 @@
 ﻿<ul class="example">
+    <li class="@Html.IsActiveRouteCss("root")">
+        <a href="@Url.PathTo("root")">Root</a>
+    </li>
     <li class="@Html.IsActiveCss("index", "home")">
         <a href="@Url.Action("index", "home", new { area = "" })">Default Page Home#Index</a>
     </li>
@@ -16,7 +19,6 @@
     </li>
     <li class="@Html.IsActiveCss(new { action = "gross", controller = "home", a = 1, really = 2, gross = 3, path = 4 })">
         <a href="@Url.Action("gross", "home", new { area = "", a = 1, really = 2, gross = 3, path = 4 })">A really gross path</a>
-@if (Url.IsActive(new {action = "gross", controller = "home", a = 1, really = 2, gross = 3, path = 4})) { @Html.Partial("Sample"); }
-    
+        @if (Url.IsActive(new {action = "gross", controller = "home", a = 1, really = 2, gross = 3, path = 4})) { @Html.Partial("Sample"); }
     </li>
 </ul>

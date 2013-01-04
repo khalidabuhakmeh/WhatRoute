@@ -2,15 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>WhatRoute</id>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
         <title>WhatRoute</title>
         <authors>Khalid</authors>
         <owners>khalidabuhakmeh</owners>
         <projectUrl>http://github.com/khalidabuhakmeh/whatroute</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>A simple set of extension methods to help you figure out whether you are on a particular route or not.</description>
-        <summary>A simple set of extension methods to help you figure out whether you are on a particular route or not.</summary>
-        <releaseNotes>Initial release</releaseNotes>
+        <description>A simple set of extension methods to help you figure out whether you are on a particular route or not. Also a nice helper method to generate routes based on a name of a route. You still need to provide route values that are not set in the defaults.</description>
+        <summary>A simple set of extension methods to help you figure out whether you are on a particular route or not. Also a nice helper method to generate routes based on a name of a route. You still need to provide route values that are not set in the defaults.</summary>
+        <releaseNotes>Added IsActiveRoute and PathTo extension methods. See Project site on GitHub for me information.</releaseNotes>
         <copyright>2013 Khalid Abuhakmeh</copyright>
         <dependencies>
             <dependency id="Microsoft.AspNet.Mvc" version="4.0.20710.0" />

@@ -14,6 +14,12 @@ namespace WhatRoute.Sample
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "root",
+                url: "",
+                defaults: new {controller = "home", action = "index"}
+            );
+
+            routes.MapRoute(
                name: "Gross",
                url: "{controller}/{action}/{a}/{really}/{gross}/{path}",
                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
